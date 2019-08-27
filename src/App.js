@@ -8,8 +8,6 @@ function App() {
   let fileInput = React.createRef();
   const [spinner, setSpinner] = React.useState(false);
   function documentGenerate(xls) {
-    console.log(xls);
-    // setSpinner(true);
     readXlsxFile(xls.current.files[0], { getSheets: true })
       .then(rows => {
         let prom = rows.map(sheet => {
